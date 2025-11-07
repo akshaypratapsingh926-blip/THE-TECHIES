@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Alpha — Cart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<a class="brand" href="index.html">Alpha</a>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+<button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+</nav>
+</div>
+</header>
+
+
+<main class="container cart-page">
+<h1>Your Cart</h1>
+<div id="cart-items"></div>
+<div id="cart-summary" class="cart-summary"></div>
+<div class="actions">
+<button id="clear-cart" class="btn btn-danger">Clear Cart</button>
+<button id="checkout" class="btn">Proceed to Checkout</button>
+</div>
+</main>
+
+
+<footer class="site-footer">
+<div class="container">
+<p>&copy; <span id="year5"></span> Alpha</p>
+</div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

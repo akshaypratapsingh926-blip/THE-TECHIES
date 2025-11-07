@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Alpha — Contact</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<a class="brand" href="index.html">Alpha</a>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+<button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+</nav>
+</div>
+</header>
+
+
+<main class="container contact-page">
+<h1>Contact Us</h1>
+<form id="contact-form" class="contact-form">
+<label>Name<br><input id="contact-name" required></label>
+<label>Email<br><input id="contact-email" type="email" required></label>
+<label>Message<br><textarea id="contact-message" rows="6" required></textarea></label>
+<button class="btn" type="submit">Send Message</button>
+<p id="contact-feedback" class="muted"></p>
+</form>
+
+
+<section class="contact-info">
+<h2>Other ways to reach us</h2>
+<p>Email: support@alpha.example</p>
+<p>Address: 123 Alpha Street, PRAYAGRAJ</p>
+</section>
+</main>
+
+
+<footer class="site-footer">
+<div class="container">
+<p>&copy; <span id="year4"></span> Alpha</p>
+</div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

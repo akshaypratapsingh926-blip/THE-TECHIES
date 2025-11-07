@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Alpha — Products</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<a class="brand" href="index.html">Alpha</a>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
+<button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+</nav>
+</div>
+</header>
+
+
+<main class="container">
+<h1>All Products</h1>
+
+
+<div class="filters">
+<label>Category:
+<select id="category-filter">
+<option value="all">All</option>
+<option value="electronics">Electronics</option>
+<option value="fashion">Fashion</option>
+<option value="skincare">Skincare</option>
+<option value="homedecor">Home Decor</option>
+</select>
+</label>
+<label>Sort:
+<select id="sort-select">
+<option value="default">Default</option>
+<option value="price-asc">Price: Low → High</option>
+<option value="price-desc">Price: High → Low</option>
+</select>
+</label>
+</div>
+
+
+<div id="products-grid" class="grid cols-4"></div>
+</main>
+
+
+<footer class="site-footer">
+<div class="container">
+<p>&copy; <span id="year2"></span> Alpha</p>
+</div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
