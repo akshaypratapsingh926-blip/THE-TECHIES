@@ -184,3 +184,4 @@ function initSite(){
 
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', initSite);
 else initSite();
+

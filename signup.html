@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | Alpha Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .signup-container {
+      background: #222;
+      padding: 40px 30px;
+      border-radius: 20px;
+      width: 380px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #00adb5;
+    }
+
+    .signup-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      background: #333;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .signup-container input:focus {
+      border: 2px solid #00adb5;
+    }
+
+    .signup-container button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #00adb5;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .signup-container button:hover {
+      background: #00bfbf;
+    }
+
+    .signup-container p {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .signup-container a {
+      color: #00adb5;
+      text-decoration: none;
+    }
+
+    .signup-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Create an Account</h2>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="password" id="password" placeholder="Password" required minlength="6" />
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required minlength="6" />
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+      }
+
+      // 👇 Replace with your backend signup endpoint later
+      const response = await fetch('/api/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password })
+      });
+
+      if (response.ok) {
+        alert('Account created successfully!');
+        window.location.href = 'login.html';
+      } else {
+        alert('Sign-up failed. Try again.');
+      }
+    });
+  </script>
+</body>
+</html>

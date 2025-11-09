@@ -15,6 +15,8 @@
 <a href="products.html">Products</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
+<a href="login.html">Login</a>
+<a href="signup.html">Signup</a>
 <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a>
 <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
 </nav>
@@ -28,7 +30,8 @@
 <div id="cart-summary" class="cart-summary"></div>
 <div class="actions">
 <button id="clear-cart" class="btn btn-danger">Clear Cart</button>
-<button id="checkout" class="btn">Proceed to Checkout</button>
+<button id="checkoutBtn" class="btn btn-danger">Proceed to Checkout</button>
+
 </div>
 </main>
 
@@ -40,6 +43,14 @@
 </footer>
 
 
+
 <script src="script.js"></script>
 </body>
+<script>
+  document.getElementById("checkoutBtn").addEventListener("click", () => {
+    // ✅ Redirect user to checkout page
+    window.location.href = "checkout.html";
+  });
+</script>
+
 </html>
